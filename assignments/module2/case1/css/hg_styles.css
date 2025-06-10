@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Nobile;
+    src: url(../resources/nobile-webfont.woff) format('woff'),
+        url(../resources/nobile-webfont.ttf) format('truetype');
+}
+
+body {
+    /* remove the default 8px margin from the user agent stylesheet */
+    margin: 0;
+}
+
+header {
+    padding: 10px;
+    /* semi-transparent */
+    background-color: rgba(128, 128, 128, 0.7);
+    /* blurs the background with the content behind it */
+    backdrop-filter: blur(5px);
+    /* this causes the header to stick to the top of the viewport as the
+    content is scrolled */
+    position: sticky;
+    /* the header is nested directly inside the body, so this is relative to
+    the top of the viewport */
+    top: 0;
+}
+
+header nav {
+    background-color: rgb(206, 230, 238);
+    border-radius: 10px;
+    width: max-content;
+    padding: 10px;
+}
+
+header nav a {
+    color: darkorange;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav a:not(:last-child)::after {
+    content: ">";
+    padding: 0px 5px;
+    color: black;
+    /* prevents the underline from appearing beneath the > characters when
+    hovering over the links */
+    display: inline-block;
+}
+
+
+h1 {
+    font-family: Nobile, Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+    margin: 20px;
+    text-align: center;
+}
+
+img {
+    /* display: block is necessary for horizontally centering the images with
+    the margin-left and margin-right properties */
+    display: block;
+    /* horizontally centers the image */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/* selects the "We have a simple philosophy. It has three main points:"
+element */
+#philosophy-description {
+    margin-left: 20px;
+}
+
+ul {
+    /* changes the type of the list marker to the character with the given
+    code point */
+    list-style-type: "\2756";
+}
+
+ul li {
+    margin: 10px;
+    /* add space between the list symbols and the text */
+    padding-left: 5px;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+
+article {
+    margin: 20px;
+}
+
+footer {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+footer {
+    /* horizontally center text in the footer */
+    text-align: center;
+    color: rgb(95, 95, 95);
+}
+
+table {
+    margin: 20px;
+}
+
+/* Only add borders to the outside of the table and horizontal borders between
+each row. There will not be any vertical borders between the columns */
+table, tr {
+  border: 1px solid darkgray;
+  border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    /* set the background color for table header cells */
+    background-color: lightblue;
+}
+
+td {
+    /* set the background color for table data cells */
+
+    background-color: lightcyan;
+}
+
+h2 {
+    margin: 20px;
+}
+
+h2::before {
+    content: "#";
+    padding-right: 5px;
+    color: grey;
+    /* make the element invisible unless hovered. This allows the content to
+    still take up space in the layout, so that it does not shift the headers
+    to the right when it appears */
+    visibility: hidden;
+}
+
+h2:hover::before {
+    /* make the element visible when hovering */
+    visibility: visible;
+}
+
+blockquote {
+    margin: 20px;
+    padding: 10px;
+    border-left: 5px solid darkorange;
+    background-color: lightyellow;
+    font-style: italic;
+}
+
+/* selects all p and a elements inside a section element */
+section :is(p, a) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Add a margin to the bottom of the last section element in the page. Use
+`:not(:only-of-type)` to exclude the section element in the hg_index.html
+page, because it has a background that we want to extend all the way to the
+bottom of the page. */
+section:last-of-type:not(:only-of-type) {
+    margin-bottom: 20px;
+}
