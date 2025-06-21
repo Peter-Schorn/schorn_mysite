@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3
+   Assignment 4.1 - Graphic Design with CSS
+
+   Browyer Realty Layout Styles
+   Author: Peter Schorn
+   Date: 06/20/2025
+
+   Filename: br_styles.css
+
+*/
+
+body {
+    background-image: url(../images/br_paper.png);
+}
+
+header {
+    /* set the background color of the header */
+    background: linear-gradient(to bottom, #c4f8f4, #ffffff);
+    /* center the header content */
+    text-align: center;
+    /* padding: 20px; */
+
+    box-shadow: 0px 5px 10px lightgray;
+
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    margin-bottom: 20px;
+
+    nav li {
+        /* allow the navigation items to be layed out horizontally */
+        display: inline-block;
+        list-style-type: none;
+        /* ensure the logo image is vertically aligned with the
+        other navigation items */
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width: 1199px) {
+
+        /* for screens with a width <= 1199px, display the logo image on a
+        separate line */
+        nav li#logo-img {
+            display: block;
+        }
+    }
+
+    nav li:not(#logo-img) {
+        padding: 15px;
+        margin: 10px;
+        /* add maximum border radius to create capsule shape */
+        border-radius: 999px;
+        /* background-color: rgb(93, 162, 242); */
+        background-color: rgb(68, 82, 235);
+
+        /* add inset shadow for "bubble" effect */
+        box-shadow: inset 2px 5px 10px rgba(255, 255, 255, 0.6);
+
+        &:hover {
+            /* change the background color on hover */
+            background-color: rgb(32, 32, 234);
+        }
+
+        a {
+            /* set the link color */
+            color: white;
+            /* remove the underline from links */
+            text-decoration: none;
+            text-align: center;
+        }
+
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 40px;
+    text-shadow: 2px 2px 4px rgb(from blue r g b / 50%);
+    font-size: 2em;
+}
+
+section {
+    margin: 20px;
+
+    background-color: wheat;
+    padding: 10px;
+    border: solid 1px #3498db;
+    border-radius: 10px;
+
+    .listing-header-container {
+        margin-left: auto;
+        margin-right: auto;
+        /* Ensure the container is only as wide as the h2 text. This allows us
+        to match the width of the hr element to this width */
+        max-width: max-content;
+        /* border: 2px solid green; */
+
+        h2 {
+            text-align: center;
+            /* margin: 20px; */
+        }
+
+        hr {
+            /* set the height of the hr element */
+            height: 3px;
+            /* set the background color of the hr element */
+            background-color: #3498db;
+            /* remove the border from the hr element */
+            border: none;
+            margin-top: 5px;
+        }
+    }
+
+    table.listing-details {
+        float: right;
+        margin: 10px;
+        border-collapse: collapse;
+        background-color: white;
+
+        th,
+        td {
+            text-align: start;
+            border: solid 1px #3498db;
+            padding: 5px;
+        }
+    }
+
+    /* .listing-description {
+
+    } */
+
+    .clear-float {
+        /* Clear the float of the table. This ensures that the table is fully
+        contained in the section element. */
+        clear: both;
+    }
+
+}
+
+.grid-container {
+    display: grid;
+    /* create as many columns as possible with a minimum width of 300px and a
+    maximum width equal to the available space divided evenly */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    /* border: 2px solid green; */
+}
+
+.grid-item {
+    border: 3px solid transparent;
+    background: radial-gradient(#bf72ee, #c4f2f4, #3498db, pink);
+    border-radius: 10px;
+    /* animate the transform on hover */
+    transition: transform 0.2s ease-in;
+
+    &:hover {
+        /* scale the item on hover */
+        transform: scale(1.05);
+    }
+
+    img {
+        /* inherit the border radius of the parent */
+        border-radius: inherit;
+        width: 100%;
+        /* ensure the images maintain their aspect ratio */
+        height: auto;
+        /* make the colors pop more on the images */
+        filter: contrast(1.2) brightness(1.2);
+
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid gray;
+        height: 5px;
+    }
+
+    .img-description {
+        text-align: center;
+        font-style: italic;
+        margin: 10px;
+        color: rgb(73, 73, 73);
+    }
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #e0e0e0;
+    border-top: 1px solid grey;
+
+    a {
+        display: inline-block;
+        color: #3498db;
+        text-decoration: none;
+        padding: 0 15px;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: #1a6cad;
+            text-decoration: underline;
+        }
+
+        /* add bullet points between each link */
+        &:not(:last-child)::after {
+            /* remove the underline from the bullet points */
+            text-decoration: none;
+            display: inline-block;
+            content: "•";
+            margin-left: 15px;
+            color: #aaa;
+        }
+    }
+
+    /* for smaller screens, display the links vertically */
+    @media screen and (max-width: 949px) {
+        a {
+            display: block;
+            margin: 10px 0;
+            padding: 8px 0;
+
+            /* Remove bullet points between links when they're displayed
+            vertically */
+            &:not(:last-child)::after {
+                display: none;
+            }
+        }
+    }
+}
