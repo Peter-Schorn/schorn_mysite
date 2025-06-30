@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Lab 5 Review Assignment
+
+   Author: Peter Schorn
+   Date: 06/29/2025
+
+   Filename: tf_print2.css
+
+   This file contains the printer styles used with the Trusted
+   Friends Parents Tips page
+
+*/
+
+
+
+/* Hidden Objects */
+
+/* Hide navigation, main heading, sidebar, and footer when printing */
+/* This creates a cleaner print layout focused on content */
+nav, header h1, section#left, footer {
+    display: none;
+}
+
+/* Page Box Styles */
+
+/* Define the physical page dimensions and margins for printing */
+@page {
+    /* set the size of the page */
+    size: 8.5in 11in;
+    margin: 0.5in;
+}
+
+/* Header Styles */
+
+/* Make logo full width and display as block element for print */
+img#logo {
+    display: block;
+    width: 100%;
+}
+
+/* Typography Styles */
+article header {
+    margin-bottom: 0.2in;
+}
+
+article h1 {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+aside {
+    background-color: rgb(211, 211, 211);
+    margin-top: 0.3in;
+}
+
+aside h1 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+aside img {
+    width: 0.8in;
+}
+
+p {
+    font-size: 12px;
+    margin-top: 0.1in;
+    margin-bottom: 0.1in;
+}
+
+/* Hypertext Styles */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Display URL after each link for print reference */
+a::after {
+    content: " " attr(href);
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+/* Page Break Styles */
+
+aside {
+    page-break-after: always;
+}
+
+/* Prevent page breaks within lists and images */
+ol, ul, img {
+    page-break-inside: avoid;
+}
+
+/* Control paragraph pagination - prevent widows and orphans */
+p {
+    /* Minimum 3 lines at top of page when paragraph continues */
+    widows: 3;
+    /* Minimum 3 lines at bottom of page before paragraph breaks */
+    orphans: 3;
+}
