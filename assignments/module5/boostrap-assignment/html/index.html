@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--
+    Author: Peter Schorn
+    Date: 06/29/2025
+    -->
+    <meta charset="UTF-8">
+    <title>Bootstrap Assignment</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- show breakpoints -->
+    <div
+        class="position-fixed text-nowrap rounded-3 p-1 m-3 bg-info opacity-50"
+        style="z-index: 100;">
+        <div class="d-block d-sm-none">xs</div>
+        <div class="d-none d-sm-block d-md-none">sm</div>
+        <div class="d-none d-md-block d-lg-none">md</div>
+        <div class="d-none d-lg-block d-xl-none">lg</div>
+        <div class="d-none d-xl-block d-xxl-none">xl</div>
+        <div class="d-none d-xxl-block">xxl</div>
+    </div>
+
+    <!-- Container for responsive fixed layout -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="py-4 mb-4">
+            <h1 class="text-center text-primary">
+                Welcome to My Bootstrap Portfolio
+            </h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="nav justify-content-center mb-4 border-bottom pb-3">
+            <a class="nav-link" href="#home">
+                Home
+
+            </a>
+            <a class="nav-link" href="#about">
+                About
+
+            </a>
+            <a class="nav-link" href="#portfolio">
+                Portfolio
+
+            </a>
+            <a class="nav-link" href="#services">
+                Services
+
+            </a>
+            <a class="nav-link" href="#contact">
+                Contact
+
+            </a>
+        </nav>
+
+        <!-- Main Content - 3 Column Layout -->
+        <main class="row mb-5">
+            <!-- Column 1 -->
+            <!-- 3 columns for >= lg, 2 columns for md-sm, 1 column for <= sm -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="../images/annabelle1.jpeg" class="card-img-top"
+                        alt="Web Design">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Web Design
+                        </h5>
+                        <p class="card-text">
+                            Creating modern, responsive websites using the
+                            latest technologies including HTML5, CSS3, and
+                            JavaScript. I focus on user experience and clean,
+                            type-safe code that performs well across all
+                            devices.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="../images/annabelle2.jpeg" class="card-img-top"
+                        alt="Development">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Frontend Development
+                        </h5>
+                        <p class="card-text">
+                            Specializing in frontend frameworks and libraries
+                            including Bootstrap and React. I create interactive
+                            user interfaces that are both beautiful and
+                            functional.
+                        </p>
+                        <a href="#" class="btn btn-success">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="../images/annabelle3.jpeg" class="card-img-top"
+                        alt="Consulting">
+                    <div class="card-body">
+                        <h5 class="card-title">Technical Consulting</h5>
+                        <p class="card-text">Providing expert guidance on web
+                            technologies, best practices, and project
+                            architecture. I help businesses make informed
+                            decisions about their digital presence and technical
+                            infrastructure.</p>
+                        <a href="#" class="btn btn-danger">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Additional Content Section -->
+        <section class="row mb-5">
+            <div class="col-lg-8">
+                <h2>
+                    About This Project
+                </h2>
+                <p class="lead">
+                    This Bootstrap assignment demonstrates the use of responsive
+                    design and Bootstrap's powerful grid system.
+                </p>
+                <p>
+                    Bootstrap is a helpful tool for building websites that work
+                    well on all devices. The container keeps all the content
+                    organized and makes sure it looks good on phones, tablets,
+                    and computers. The navigation menu at the top uses
+                    Bootstrap's built-in styles with centered links, which gives
+                    the page a neat and professional appearance.
+                </p>
+                <p>
+                    The three cards above change their layout depending on what
+                    device you're using. On screens equal to or larger than
+                    large (lg), they will be arranged in three columns. On
+                    screens smaller than large but equal to or larger than
+                    medium (md), they will be arranged in two columns. On
+                    screens equal to or smaller than small (sm), they will stack
+                    in a single column. This means that the cards will always be
+                    easy to read and interact with, no matter what device you're
+                    using. Bootstrap handles all of this automatically, so we
+                    don't have to write extra code to make it work on different
+                    screen sizes.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <div class="bg-light p-4 rounded">
+                    <h4>Quick Facts</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <strong>Framework:</strong> Bootstrap 5.3.7
+                        </li>
+                        <li>
+                            <strong>Layout:</strong> Responsive Grid
+                        </li>
+                        <li>
+                            <strong>Components:</strong> Cards, Navigation,
+                            Buttons
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        &copy; 2025 Peter Schorn. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        ITSE 1301 - Web Design Tools | Bootstrap Assignment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+</html>
