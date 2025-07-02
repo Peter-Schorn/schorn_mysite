@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Assignment 5.1 Jersey Buoys
+
+   Author: Peter Schorn
+   Date: 06/30/2025
+
+   Filename: jb_styles.css
+
+   This file contains the screen styles used with the
+   Jersey Buoys home page
+
+*/
+
+:root {
+    --light-green-color: rgb(156, 188, 156);
+}
+
+body {
+    /* remove the default 8px margin */
+    margin: 0;
+}
+
+/* MARK: Header Styles */
+
+header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    background-color: rgb(35, 35, 35);
+}
+
+header img {
+    /* limit the max height of the image*/
+    max-height: 300px;
+    /* ensure the image maintains its aspect ratio */
+    object-fit: contain;
+}
+
+.header-content-container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    /* horizontally center the text */
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    color: var(--light-green-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 5px;
+    border-bottom: lightgray 2px solid;
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+    /* center the navigation elements */
+    text-align: center;
+}
+
+.nav-icon-container {
+    /* hide the nav icon on larger screens */
+    display: none;
+    /* align the image to the left of the container */
+    text-align: start;
+}
+
+header nav ul {
+    margin: 5px;
+    /* remove default padding */
+    padding: 0;
+}
+
+header nav ul li {
+    /* border: 2px solid green; */
+    /* layout the list elements horizontally */
+    display: inline-block;
+    padding: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+header nav ul li a:hover {
+    /* add a underline to the nav items */
+    border-bottom: var(--light-green-color) solid 2px;
+}
+
+/* MARK: Main Styles */
+
+main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    /* allow flex items to wrap to the next line if they can't all fit on the
+    first line */
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* MARK: Side Bar Styles */
+
+.sidebar {
+    /* the sidebar can grow or shrink, and its initial size is the preferred
+    width of the content, up to a limit of 300px defined below */
+    -webkit-flex: 1 1 max-content;
+    flex: 1 1 max-content;
+    /* limit the maximum width of the side bar */
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar ul a {
+    text-decoration: none;
+    color: rgb(8, 59, 8);
+
+    &:hover {
+        /* add a underline when hovering over the links */
+        text-decoration: underline;
+    }
+}
+
+.classes,
+.camps,
+.store {
+    padding: 10px 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 10px;
+
+    /* use a linear gradient as the background that begins as a light green at
+    the top and transparent at 50% */
+    background: linear-gradient(to bottom,
+            rgb(from var(--light-green-color) r g b / 0.5),
+            transparent 50%);
+}
+
+/* MARK: Main Content Styles */
+
+.main-content {
+    /* the main content can grow, but not shrink, and its initial size is 60% of
+    its container */
+    -webkit-flex: 1 1 60%;
+    flex: 1 1 60%;
+    margin: 10px 10px 30px 10px;
+}
+
+.main-content section:not(.surfer-slang) {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.main-content img {
+    /* limit the max height and width of the image */
+    max-height: 200px;
+    max-width: 400px;
+    /* ensure the image can shrink as the screen gets smaller */
+    width: 100%;
+    /* ensure the image maintains its aspect ratio */
+    object-fit: contain;
+    /* align the image to the right */
+    object-position: right 50%;
+    padding: 10px;
+    display: block;
+
+}
+
+/* MARK: Image Gallery Styles */
+
+.image-gallery {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    /* limit the max height and width of the image */
+    max-height: 200px;
+    max-width: 400px;
+    /* ensure the image can shrink as the screen gets smaller */
+    width: 100%;
+    /* ensure the image maintains its aspect ratio */
+    object-fit: contain;
+    /* align the image to the center of the container */
+    object-position: center;
+    padding: 10px;
+}
+
+/* MARK: Surfer Slang Styles */
+
+.surfer-slang {
+    width: max-content;
+    /* padding: 10px; */
+    border: solid 1px lightgray;
+    border-radius: 10px;
+    background-color: rgb(238, 238, 238);
+    /* ensure the non-rounded corners of the heading container do not overflow
+    this container */
+    overflow: clip;
+    margin-top: 30px;
+}
+
+.surfer-slang .heading-container {
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+    border-bottom: solid 1px lightgray;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.surfer-slang h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.surfer-slang hr {
+    border: 0;
+    height: 1px;
+    /* use negative margin on the sides to cancel out the padding of the
+    enclosing element */
+    margin: 0 -10px 0 -10px;
+    background-color: lightgray;
+
+}
+
+.surfer-slang-content {
+    padding: 20px;
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* MARK: Footer Styles */
+
+footer {
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgb(35, 35, 35);
+    color: var(--light-green-color);
+    /* text-align: center; */
+    padding: 20px;
+    font-size: 0.8em;
+    gap: 20px;
+    /* add even spacing between each flex item */
+    justify-content: space-evenly;
+}
+
+footer>div {
+    /* vertically center all of the elements in the footer */
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+footer a {
+    /* inherit the color defined in the footer, instead of using the default
+    link color */
+    color: inherit;
+}
+
+/* MARK: Media Queries */
+
+@media screen and (max-width: 480px) {
+
+    /* show the nav icon on smaller screens */
+    .nav-icon-container {
+        display: block;
+    }
+
+    header nav ul {
+        /* hide the navigation menu by default on smaller screens */
+        display: none;
+    }
+
+    /* Show navigation menu when hovering/tapping nav icon or menu itself */
+    .nav-icon-container:hover+ul,
+    header nav ul:hover {
+        display: block;
+
+    }
+
+    header nav ul li {
+        /* for screens with a width <= 480px, display the list elements
+        vertically */
+        display: block;
+        /* align the list elements to the left on smaller screens */
+        text-align: start;
+    }
+
+    /* hide surfer slang on smaller screens */
+    .surfer-slang {
+        display: none;
+    }
+
+    /* show the sidebar at the bottom on smaller screens */
+    .sidebar {
+        order: 99;
+    }
+
+    footer {
+        /* make the text larger on smaller screens so it is easier to read */
+        font-size: 1em;
+    }
+
+    footer a:is(.phone-number, .email-address) {
+        /* ensure the added padding causes the elements to be more spaced out,
+        instead of overlapping */
+        display: inline-block;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgb(72, 77, 79);
+    }
+
+    /* make the phone number easier to use on mobile devices */
+    .phone-number::before {
+        /* prevent this content from being underlined */
+        display: inline-block;
+        content: "📞";
+        padding-right: 5px;
+    }
+
+    /* make the email address easier to use on mobile devices */
+    .email-address::before {
+        /* prevent this content from being underlined */
+        display: inline-block;
+        content: "✉️";
+        padding-right: 5px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    header {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    /* MARK: Main Content */
+
+    .main-content section:not(.surfer-slang) {
+        /* layout the sections vertically on smaller screens */
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .main-content img {
+        /* align the image to the center of the container */
+        object-position: center;
+    }
+
+    /* layout the footer elements vertically on smaller screens */
+    footer {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+}
