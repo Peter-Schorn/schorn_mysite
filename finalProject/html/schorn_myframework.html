@@ -5,319 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Framework - Peter Schorn</title>
     <link rel="stylesheet" href="../css/schorn_styles.css">
-    <style>
-        /* Framework visualization styles */
-        .framework-section {
-            border: 2px solid #e74c3c;
-            margin: 1rem 0;
-            padding: 2rem;
-            background: rgba(231, 76, 60, 0.05);
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .framework-section::before {
-            content: attr(data-module);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background: #e74c3c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .framework-placeholder {
-            background: #ecf0f1;
-            border: 2px dashed #bdc3c7;
-            padding: 2rem;
-            margin: 1rem 0;
-            text-align: center;
-            border-radius: 8px;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-
-        .framework-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .framework-flex {
-            display: flex;
-            gap: 1rem;
-            margin: 1rem 0;
-            flex-wrap: wrap;
-        }
-
-        .framework-item {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            padding: 1rem;
-            border-radius: 5px;
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .nav-placeholder {
-            background: rgba(52, 152, 219, 0.1);
-            border: 2px dashed #3498db;
-        }
-
-        .content-placeholder {
-            background: rgba(46, 204, 113, 0.1);
-            border: 2px dashed #2ecc71;
-        }
-
-        .media-placeholder {
-            background: rgba(155, 89, 182, 0.1);
-            border: 2px dashed #9b59b6;
-        }
-
-        .form-placeholder {
-            background: rgba(241, 196, 15, 0.1);
-            border: 2px dashed #f1c40f;
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="../css/framework_styles.css"> -->
 </head>
 <body>
-    <div class="container">
-        <h1>Portfolio Website Framework</h1>
-        <p class="text-center">This page shows the framework structure before content insertion, demonstrating the integration of all course modules.</p>
-
-        <!-- Header Framework -->
-        <div class="framework-section" data-module="Module 1: HTML5">
-            <h2>Header Framework</h2>
-            <nav class="framework-placeholder nav-placeholder">
-                <strong>Navigation Structure (HTML5 Semantic Elements)</strong><br>
-                &lt;header&gt;<br>
-                &nbsp;&nbsp;&lt;nav&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt; Navigation Links &lt;/ul&gt;<br>
-                &nbsp;&nbsp;&lt;/nav&gt;<br>
-                &lt;/header&gt;
-            </nav>
-        </div>
-
-        <!-- Main Content Framework -->
-        <div class="framework-section" data-module="Module 2: CSS">
-            <h2>Main Content Framework</h2>
-            <main class="framework-placeholder content-placeholder">
-                <strong>Main Content Area (CSS Styling)</strong><br>
-                &lt;main&gt;<br>
-                &nbsp;&nbsp;CSS Grid and Flexbox Layouts<br>
-                &nbsp;&nbsp;Typography and Color Schemes<br>
-                &nbsp;&nbsp;Box Model and Positioning<br>
-                &lt;/main&gt;
-            </main>
-        </div>
-
-        <!-- Page Layout Framework -->
-        <div class="framework-section" data-module="Module 3: Page Layout">
-            <h2>Page Layout Framework</h2>
-            <div class="framework-grid">
-                <div class="framework-item">
-                    <strong>CSS Grid Container</strong><br>
-                    Grid Template Areas<br>
-                    Grid Template Columns<br>
-                    Grid Template Rows
-                </div>
-                <div class="framework-item">
-                    <strong>Flexbox Container</strong><br>
-                    Flex Direction<br>
-                    Justify Content<br>
-                    Align Items
-                </div>
-                <div class="framework-item">
-                    <strong>Float Layouts</strong><br>
-                    Legacy Support<br>
-                    Clearfix Utilities<br>
-                    Float Clearing
-                </div>
-            </div>
-        </div>
-
-        <!-- Graphic Design Framework -->
-        <div class="framework-section" data-module="Module 4: Graphic Design">
-            <h2>Graphic Design Framework</h2>
-            <div class="framework-flex">
-                <div class="framework-item">
-                    <strong>Color Schemes</strong><br>
-                    CSS Variables<br>
-                    Gradient Backgrounds<br>
-                    Color Psychology
-                </div>
-                <div class="framework-item">
-                    <strong>Typography</strong><br>
-                    Font Loading<br>
-                    Text Effects<br>
-                    Readability
-                </div>
-                <div class="framework-item">
-                    <strong>Visual Effects</strong><br>
-                    Shadows and Borders<br>
-                    Animations<br>
-                    Transitions
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Web Framework -->
-        <div class="framework-section" data-module="Module 5: Mobile Web">
-            <h2>Mobile Web Framework</h2>
-            <div class="framework-placeholder">
-                <strong>Responsive Design Structure</strong><br><br>
-                <code>
-                @media screen and (max-width: 768px) {<br>
-                &nbsp;&nbsp;/* Tablet Styles */<br>
-                }<br><br>
-                @media screen and (max-width: 480px) {<br>
-                &nbsp;&nbsp;/* Mobile Styles */<br>
-                }
-                </code><br><br>
-                Mobile-First Design Approach<br>
-                Flexible Grid Systems<br>
-                Touch-Friendly Interfaces
-            </div>
-        </div>
-
-        <!-- Tables and Columns Framework -->
-        <div class="framework-section" data-module="Module 6: Tables & Columns">
-            <h2>Tables and Columns Framework</h2>
-            <div class="framework-flex">
-                <div class="framework-item">
-                    <strong>Table Structure</strong><br>
-                    &lt;table&gt;<br>
-                    &nbsp;&nbsp;&lt;thead&gt;<br>
-                    &nbsp;&nbsp;&lt;tbody&gt;<br>
-                    &nbsp;&nbsp;&lt;tfoot&gt;<br>
-                    &lt;/table&gt;
-                </div>
-                <div class="framework-item">
-                    <strong>Column Layouts</strong><br>
-                    CSS Multi-Column<br>
-                    Column Count<br>
-                    Column Gap<br>
-                    Column Rules
-                </div>
-            </div>
-        </div>
-
-        <!-- Web Forms Framework -->
-        <div class="framework-section" data-module="Module 7: Web Forms">
-            <h2>Web Forms Framework</h2>
-            <div class="framework-placeholder form-placeholder">
-                <strong>Form Structure</strong><br><br>
-                &lt;form&gt;<br>
-                &nbsp;&nbsp;&lt;fieldset&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Form Section&lt;/legend&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Input Labels&lt;/label&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&gt; Form Controls&lt;/input&gt;<br>
-                &nbsp;&nbsp;&lt;/fieldset&gt;<br>
-                &nbsp;&nbsp;&lt;button&gt;Submit&lt;/button&gt;<br>
-                &lt;/form&gt;<br><br>
-                Form Validation and Accessibility
-            </div>
-        </div>
-
-        <!-- Multimedia Framework -->
-        <div class="framework-section" data-module="Module 8: Multimedia">
-            <h2>Multimedia Framework</h2>
-            <div class="framework-grid">
-                <div class="framework-item media-placeholder">
-                    <strong>Video Elements</strong><br>
-                    &lt;video&gt; Tags<br>
-                    Embedded Content<br>
-                    Responsive Videos
-                </div>
-                <div class="framework-item media-placeholder">
-                    <strong>Audio Elements</strong><br>
-                    &lt;audio&gt; Tags<br>
-                    Audio Controls<br>
-                    Fallback Content
-                </div>
-                <div class="framework-item media-placeholder">
-                    <strong>Image Galleries</strong><br>
-                    &lt;picture&gt; Elements<br>
-                    Responsive Images<br>
-                    Lazy Loading
-                </div>
-            </div>
-        </div>
-
-        <!-- JavaScript Framework -->
-        <div class="framework-section" data-module="Module 9: JavaScript">
-            <h2>JavaScript Framework</h2>
-            <div class="framework-placeholder">
-                <strong>JavaScript Integration Structure</strong><br><br>
-                <code>
-                // DOM Manipulation<br>
-                document.addEventListener('DOMContentLoaded', function() {<br>
-                &nbsp;&nbsp;// Interactive Elements<br>
-                &nbsp;&nbsp;// Event Listeners<br>
-                &nbsp;&nbsp;// Dynamic Content<br>
-                });<br><br>
-                // Form Validation<br>
-                // Animations and Effects<br>
-                // API Integration
-                </code>
-            </div>
-        </div>
-
-        <!-- Integration Framework -->
-        <div class="framework-section" data-module="All Modules">
-            <h2>Module Integration Framework</h2>
-            <div class="framework-grid">
-                <div class="framework-item">
-                    <strong>HTML5 Foundation</strong><br>
-                    Semantic Structure<br>
-                    Accessibility Features<br>
-                    Modern Elements
-                </div>
-                <div class="framework-item">
-                    <strong>CSS Architecture</strong><br>
-                    Modular Stylesheets<br>
-                    Responsive Design<br>
-                    Visual Effects
-                </div>
-                <div class="framework-item">
-                    <strong>JavaScript Enhancement</strong><br>
-                    Progressive Enhancement<br>
-                    Interactive Features<br>
-                    User Experience
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Framework -->
-        <div class="framework-section" data-module="HTML5 Structure">
-            <h2>Footer Framework</h2>
-            <footer class="framework-placeholder">
-                <strong>Footer Structure</strong><br>
-                &lt;footer&gt;<br>
-                &nbsp;&nbsp;&lt;section&gt; Contact Information &lt;/section&gt;<br>
-                &nbsp;&nbsp;&lt;section&gt; Social Media Links &lt;/section&gt;<br>
-                &nbsp;&nbsp;&lt;section&gt; Copyright Information &lt;/section&gt;<br>
-                &lt;/footer&gt;
-            </footer>
-        </div>
-
-        <!-- Framework Notes -->
-        <div class="card mt-2">
-            <h3>Framework Implementation Notes:</h3>
+    <!-- Module 1: HTML5 Semantic Elements -->
+    <header id="header">
+        <nav>
             <ul>
-                <li><strong>Modular Design:</strong> Each section represents a specific module requirement</li>
-                <li><strong>Semantic HTML:</strong> Proper use of HTML5 semantic elements throughout</li>
-                <li><strong>CSS Architecture:</strong> Organized stylesheet with clear section divisions</li>
-                <li><strong>Responsive Framework:</strong> Mobile-first design with progressive enhancement</li>
-                <li><strong>JavaScript Integration:</strong> Event-driven interactions and DOM manipulation</li>
-                <li><strong>Accessibility:</strong> WCAG guidelines compliance and keyboard navigation</li>
-                <li><strong>Performance:</strong> Optimized loading and efficient CSS/JS delivery</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="schorn_mylayout.html">Layout</a></li>
+                <li><a href="schorn_myframework.html" class="btn">Framework</a></li>
+                <li><a href="links-reference.html">Links Reference</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Portfolio Website Template</h1>
+        <p class="text-center">This page shows the basic template structure used across all portfolio pages.</p>
+
+        <!-- Hero Section Template -->
+        <section class="card fade-in-up">
+            <h2>Hero Section Template</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="media-container">
+                        <div style="width: 300px; height: 300px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #666;">
+                            [Profile Image Placeholder]
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="text-columns">
+                        <h3>[Your Name]</h3>
+                        <p>[Brief introduction paragraph about yourself, your skills, and what you do. This would be your personal pitch or elevator speech.]</p>
+                    </div>
+                    <div class="flex-container mt-2">
+                        <a href="#" class="btn">[Primary Action Button]</a>
+                        <a href="#" class="btn btn-secondary">[Secondary Action Button]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section Template -->
+        <section class="card">
+            <h2>Main Content Section Template</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3>[Section Title]</h3>
+                    <p>[Content description or introduction paragraph goes here.]</p>
+                    <ul>
+                        <li>[List item 1]</li>
+                        <li>[List item 2]</li>
+                        <li>[List item 3]</li>
+                    </ul>
+                </div>
+                <div class="flex-item">
+                    <div class="media-container">
+                        <div style="width: 100%; height: 200px; background: #f0f0f0; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
+                            [Image/Video Placeholder]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Section Template -->
+        <section class="card">
+            <h2>Grid Layout Template</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>[Item 1 Title]</h3>
+                    <p>[Brief description]</p>
+                    <div style="width: 100%; height: 150px; background: #e8f4f8; border-radius: 8px; margin: 1rem 0; display: flex; align-items: center; justify-content: center; color: #666;">
+                        [Media Placeholder]
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h3>[Item 2 Title]</h3>
+                    <p>[Brief description]</p>
+                    <div style="width: 100%; height: 150px; background: #f8f8e8; border-radius: 8px; margin: 1rem 0; display: flex; align-items: center; justify-content: center; color: #666;">
+                        [Media Placeholder]
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h3>[Item 3 Title]</h3>
+                    <p>[Brief description]</p>
+                    <div style="width: 100%; height: 150px; background: #f0f8f0; border-radius: 8px; margin: 1rem 0; display: flex; align-items: center; justify-content: center; color: #666;">
+                        [Media Placeholder]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Template -->
+        <section class="card">
+            <h2>Table Layout Template</h2>
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>[Column 1]</th>
+                        <th>[Column 2]</th>
+                        <th>[Column 3]</th>
+                        <th>[Column 4]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[Data 1]</td>
+                        <td>[Data 2]</td>
+                        <td>[Data 3]</td>
+                        <td>[Data 4]</td>
+                    </tr>
+                    <tr>
+                        <td>[Data 5]</td>
+                        <td>[Data 6]</td>
+                        <td>[Data 7]</td>
+                        <td>[Data 8]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form Template -->
+        <section class="card">
+            <h2>Contact Form Template</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="form-container">
+                        <h3>[Form Title]</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="template-name">[Field Label] *</label>
+                                <input type="text" id="template-name" placeholder="[Placeholder text]">
+                            </div>
+                            <div class="form-group">
+                                <label for="template-email">[Email Field] *</label>
+                                <input type="email" id="template-email" placeholder="[Email placeholder]">
+                            </div>
+                            <div class="form-group">
+                                <label for="template-select">[Dropdown Field]</label>
+                                <select id="template-select">
+                                    <option>[Option 1]</option>
+                                    <option>[Option 2]</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="template-message">[Message Field] *</label>
+                                <textarea id="template-message" rows="4" placeholder="[Message placeholder]"></textarea>
+                            </div>
+                            <button type="submit" class="btn">[Submit Button]</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="card">
+                        <h3>[Side Information]</h3>
+                        <p><strong>[Label]:</strong> [Contact detail]</p>
+                        <p><strong>[Label]:</strong> [Contact detail]</p>
+                        <p><strong>[Label]:</strong> [Contact detail]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>

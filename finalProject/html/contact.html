@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Peter Schorn Portfolio</title>
+    <link rel="stylesheet" href="../css/schorn_styles.css">
+    <meta name="description" content="Contact Peter Schorn - Software Developer. Get in touch for project inquiries and collaboration opportunities.">
+</head>
+<body>
+    <!-- Module 1: HTML5 Semantic Elements -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" class="btn">Contact</a></li>
+                <li><a href="schorn_mylayout.html">Layout</a></li>
+                <li><a href="schorn_myframework.html">Framework</a></li>
+                <li><a href="links-reference.html">Links Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Module 7: Web Forms - Contact Section -->
+        <section id="contact" class="container">
+            <div class="card fade-in-up">
+                <h1 class="gradient-text">Get In Touch</h1>
+                <p class="text-center">Ready to collaborate on your next project? Let's discuss how I can help bring your ideas to life.</p>
+
+                <div class="flex-container">
+                    <!-- Contact Form -->
+                    <div class="flex-item">
+                        <div class="form-container" id="contact-form">
+                            <h2>Send Me a Message</h2>
+                            <form id="contact-form-element">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="project-type">Project Type</label>
+                                    <select id="project-type" name="project-type">
+                                        <option value="">Select a project type</option>
+                                        <option value="ios-app">iOS App Development</option>
+                                        <option value="web-app">Web Application</option>
+                                        <option value="api">API Development</option>
+                                        <option value="consultation">Consultation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="budget">Budget Range</label>
+                                    <input type="range" id="budget" name="budget" min="1000" max="50000" value="10000">
+                                    <span id="budget-display">$10,000</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="timeline">Preferred Start Date</label>
+                                    <input type="date" id="timeline" name="timeline">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="flex-item">
+                        <div class="card">
+                            <h2>Contact Information</h2>
+                            <p><strong>Email:</strong> peter@example.com</p>
+                            <p><strong>Location:</strong> Austin, Texas</p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/Peter-Schorn">@Peter-Schorn</a></p>
+
+                            <h3>Social Media</h3>
+                            <div class="flex-container">
+                                <a href="#" class="btn btn-secondary">LinkedIn</a>
+                                <a href="#" class="btn btn-secondary">Twitter</a>
+                                <a href="#" class="btn btn-secondary">GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="card mt-2">
+                            <h3>Services Offered</h3>
+                            <ul>
+                                <li>iOS/macOS App Development</li>
+                                <li>Web Application Development</li>
+                                <li>API Design & Development</li>
+                                <li>Code Review & Consultation</li>
+                                <li>Technical Writing</li>
+                                <li>Open Source Contributions</li>
+                            </ul>
+                        </div>
+
+                        <div class="card mt-2">
+                            <h3>Response Time</h3>
+                            <p>I typically respond to inquiries within 24 hours. For urgent matters, please mention it in your message.</p>
+                            <p><strong>Available for:</strong></p>
+                            <ul>
+                                <li>Freelance Projects</li>
+                                <li>Contract Work</li>
+                                <li>Consulting</li>
+                                <li>Speaking Engagements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Module 1: HTML5 Footer -->
+    <footer id="footer" class="container">
+        <div class="card">
+            <div class="flex-container" id="footer-flex">
+                <div class="flex-item">
+                    <p>&copy; 2025 Peter Schorn. All rights reserved.</p>
+                </div>
+                <div class="flex-item text-center">
+                    <a href="links-reference.html" class="btn btn-secondary">View Links Reference</a>
+                </div>
+                <div class="flex-item text-right">
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+
+
+</body>
+</html>

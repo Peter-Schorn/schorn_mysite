@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Peter Schorn Portfolio</title>
+    <link rel="stylesheet" href="../css/schorn_styles.css">
+    <meta name="description" content="Projects by Peter Schorn - Soft Player, SpotifyAPI, Barcode Drop, and Showrunner applications.">
+</head>
+<body>
+    <!-- Module 1: HTML5 Semantic Elements -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="btn">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="schorn_mylayout.html">Layout</a></li>
+                <li><a href="schorn_myframework.html">Framework</a></li>
+                <li><a href="links-reference.html">Links Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">My Projects</h1>
+                <p class="hero-subtitle">Innovative software solutions across multiple platforms</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">294</span>
+                        <span class="stat-label">GitHub Stars</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Major Projects</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container">
+            <div class="card fade-in-up">
+                <h2 class="gradient-text">Featured Projects</h2>
+                <p class="text-center">A showcase of my software development work across multiple platforms and technologies.</p>
+
+                <!-- Module 3: CSS Grid Layout -->
+                <div class="grid-container" id="projects-grid">
+
+                    <!-- Soft Player Project -->
+                    <div class="card shadow-hover">
+                        <h3>Soft Player</h3>
+                        <p><strong>A macOS menu bar app to control Spotify playback</strong></p>
+
+                        <img src="../images/Soft Player app icon.svg" alt="app icon">
+
+                        <ul>
+                            <li>Over 100,000 downloads</li>
+                            <li>View and control your Spotify playback directly from the menu bar</li>
+                            <li>Play your playlists and albums</li>
+                            <li>See your queue and transfer playback between devices</li>
+                            <li>Seek to position, change volume, toggle shuffle</li>
+                            <li>Change repeat mode and Touch Bar support</li>
+                        </ul>
+
+                        <div class="flex-container mt-2">
+                            <a href="https://www.soft-player.com/" class="btn" target="_blank">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- SpotifyAPI Project -->
+                    <div class="card shadow-hover">
+                        <h3>SpotifyAPI</h3>
+                        <p><strong>A Swift library for interacting with the Spotify Web API</strong></p>
+
+                        <div class="text-center">
+                            <img src="../images/github-mark/github-mark.svg" alt="Github Logo">
+                        </div>
+
+                        <ul>
+                            <li>294 stars, 37 forks on GitHub</li>
+                            <li>Includes CI and thorough test coverage</li>
+                            <li>Supports all Spotify web API endpoints</li>
+                            <li>Uses Apple's Combine framework for asynchronous requests</li>
+                            <li>Supports three different authorization methods</li>
+                            <li>Automatically refreshes access tokens</li>
+                        </ul>
+
+                        <div class="flex-container mt-2">
+                            <a href="https://github.com/Peter-Schorn/SpotifyAPI" class="btn" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+
+                    <!-- Barcode Drop Project -->
+                    <div class="card shadow-hover">
+                        <h3>Barcode Drop</h3>
+                        <p><strong>A full-stack web app for scanning, managing, and viewing barcodes in real time</strong></p>
+
+                        <!-- Module 8: Multimedia - App Screenshot -->
+
+
+                        <ul>
+                            <li>Built with React, TypeScript, and Bootstrap</li>
+                            <li>WebSocket integration for real-time updates</li>
+                            <li>Uses Barcode Detection API for live scanning</li>
+                            <li>Audio and vibration feedback for scanning</li>
+                            <li>Responsive design for mobile and desktop</li>
+                        </ul>
+
+                        <div class="flex-container mt-2">
+                            <a href="https://www.barcodedrop.com/" class="btn" target="_blank">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Showrunner Project -->
+                    <div class="card shadow-hover">
+                        <h3>Showrunner</h3>
+                        <p><strong>Bootcamp project to track your favorite TV shows</strong></p>
+
+                        <ul>
+                            <li>Helps users keep up with episodes</li>
+                            <li>Track favorite TV shows and progress</li>
+                            <li>Built during ACC Software Developer Bootcamp</li>
+                            <li>Demonstrates full-stack development skills</li>
+                        </ul>
+
+                        <div class="flex-container mt-2">
+                            <a href="https://showrunner.herokuapp.com/" class="btn" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Module 1: HTML5 Footer -->
+    <footer id="footer" class="container">
+        <div class="card">
+            <div class="flex-container" id="footer-flex">
+                <div class="flex-item">
+                    <p>&copy; 2025 Peter Schorn. All rights reserved.</p>
+                </div>
+                <div class="flex-item text-center">
+                    <a href="links-reference.html" class="btn btn-secondary">View Links Reference</a>
+                </div>
+                <div class="flex-item text-right">
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

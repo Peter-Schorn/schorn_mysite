@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Schorn - Software Developer Portfolio</title>
     <link rel="stylesheet" href="../css/schorn_styles.css">
-    <meta name="description" content="Peter Schorn - Software Developer specializing in Swift, JavaScript, Python. Creator of Soft Player, SpotifyAPI, and full-stack applications.">
+    <meta name="description"
+        content="Peter Schorn - Software Developer specializing in Swift, JavaScript, Python. Creator of Soft Player, SpotifyAPI, and full-stack applications.">
 </head>
 <body>
     <!-- Module 1: HTML5 Semantic Elements -->
     <header id="header">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="links-reference.html" class="btn">Module References</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="schorn_mylayout.html">Layout</a></li>
+                <li><a href="schorn_myframework.html">Framework</a></li>
+                <li><a href="links-reference.html" class="btn">Links
+                        Reference</a></li>
             </ul>
         </nav>
     </header>
@@ -29,409 +32,27 @@
                 <h1 class="gradient-text">Hi, I'm Peter Schorn</h1>
                 <div class="flex-container">
                     <div class="flex-item">
-                        <!-- Module 8: Multimedia - Profile Image -->
-                        <div class="media-container" id="profile-image">
-                            <img src="../images/profile-placeholder.jpg" alt="Peter Schorn Profile" class="profile-img" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
-                        </div>
+                        <img src="../images/Peter Memoji.png"
+                            alt="Peter Schorn Profile"
+                            class="profile-img profile-image">
                     </div>
                     <div class="flex-item">
                         <!-- Module 6: CSS Columns for text -->
                         <div class="text-columns" id="about-columns">
-                            <p>I'm a hard-working and quick-learning software developer based in Austin, Texas. I build cross-platform applications and developer tools using Swift, JavaScript, Python, and more. Whether it's creating polished macOS apps or crafting APIs and full-stack solutions, I focus on writing clean, maintainable code that solves real problems.</p>
+                            <p>I'm a hard-working and quick-learning software
+                                developer based in Austin, Texas. I build
+                                cross-platform applications and developer tools
+                                using Swift, JavaScript, Python, and more.
+                                Whether it's creating polished macOS apps or
+                                crafting APIs and full-stack solutions, I focus
+                                on writing clean, maintainable code that solves
+                                real problems.</p>
                         </div>
                         <div class="flex-container mt-2">
-                            <a href="#projects" class="btn">View My Projects</a>
-                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section with Module Features -->
-        <section id="about" class="container">
-            <div class="card fade-in-up">
-                <h2>About Me</h2>
-
-                <!-- Module 6: Tables - Quick Facts Table -->
-                <div id="about-table">
-                    <h3>Quick Facts</h3>
-                    <table id="personal-details">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th>Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Location</td>
-                                <td>Austin, Texas</td>
-                            </tr>
-                            <tr>
-                                <td>Primary Languages</td>
-                                <td>Swift, JavaScript, Python</td>
-                            </tr>
-                            <tr>
-                                <td>Specialization</td>
-                                <td>Cross-platform Development</td>
-                            </tr>
-                            <tr>
-                                <td>Years of Experience</td>
-                                <td>5+ Years</td>
-                            </tr>
-                            <tr>
-                                <td>Open Source Projects</td>
-                                <td>SpotifyAPI (294 stars)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="container">
-            <div class="card fade-in-up">
-                <h2>Projects</h2>
-
-                <!-- Module 3: CSS Grid Layout -->
-                <div class="grid-container" id="projects-grid">
-
-                    <!-- Soft Player Project -->
-                    <div class="card shadow-hover">
-                        <h3>Soft Player</h3>
-                        <p><strong>A macOS menu bar app to control Spotify playback</strong></p>
-
-                        <!-- Module 8: Multimedia - Project Demo Video -->
-                        <div class="video-wrapper" id="soft-player-demo">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Soft Player Demo" allowfullscreen></iframe>
-                        </div>
-
-                        <ul>
-                            <li>Over 100,000 downloads</li>
-                            <li>View and control your Spotify playback directly from the menu bar</li>
-                            <li>Play your playlists and albums</li>
-                            <li>See your queue and transfer playback between devices</li>
-                            <li>Seek to position, change volume, toggle shuffle</li>
-                            <li>Change repeat mode and Touch Bar support</li>
-                        </ul>
-
-                        <div class="flex-container mt-2">
-                            <a href="#" class="btn">View Project</a>
-                            <a href="#" class="btn btn-secondary">Download</a>
-                        </div>
-                    </div>
-
-                    <!-- SpotifyAPI Project -->
-                    <div class="card shadow-hover">
-                        <h3>SpotifyAPI</h3>
-                        <p><strong>A Swift library for interacting with the Spotify Web API</strong></p>
-
-                        <!-- Module 8: Multimedia - Code Demo -->
-                        <div class="media-container">
-                            <img src="../images/spotifyapi-code.jpg" alt="SpotifyAPI Code Example" style="width: 100%; border-radius: 10px;">
-                        </div>
-
-                        <ul>
-                            <li>294 stars, 37 forks on GitHub</li>
-                            <li>Includes CI and thorough test coverage</li>
-                            <li>Supports all Spotify web API endpoints</li>
-                            <li>Uses Apple's Combine framework for asynchronous requests</li>
-                            <li>Supports three different authorization methods</li>
-                            <li>Automatically refreshes access tokens</li>
-                        </ul>
-
-                        <div class="flex-container mt-2">
-                            <a href="#" class="btn">GitHub Repository</a>
-                            <a href="#" class="btn btn-secondary">Documentation</a>
-                        </div>
-                    </div>
-
-                    <!-- Barcode Drop Project -->
-                    <div class="card shadow-hover">
-                        <h3>Barcode Drop</h3>
-                        <p><strong>A full-stack web app for scanning, managing, and viewing barcodes in real time</strong></p>
-
-                        <!-- Module 8: Multimedia - App Screenshot -->
-                        <div class="gallery" id="barcode-gallery">
-                            <img src="../images/barcode-drop-1.jpg" alt="Barcode Drop Interface">
-                            <img src="../images/barcode-drop-2.jpg" alt="Barcode Scanning">
-                            <img src="../images/barcode-drop-3.jpg" alt="Real-time Updates">
-                        </div>
-
-                        <ul>
-                            <li>Built with React, TypeScript, and Bootstrap</li>
-                            <li>WebSocket integration for real-time updates</li>
-                            <li>Uses Barcode Detection API for live scanning</li>
-                            <li>Audio and vibration feedback for scanning</li>
-                            <li>Responsive design for mobile and desktop</li>
-                        </ul>
-
-                        <div class="flex-container mt-2">
-                            <a href="#" class="btn">Live Demo</a>
-                            <a href="#" class="btn btn-secondary">Source Code</a>
-                        </div>
-                    </div>
-
-                    <!-- Showrunner Project -->
-                    <div class="card shadow-hover">
-                        <h3>Showrunner</h3>
-                        <p><strong>Bootcamp project to track your favorite TV shows</strong></p>
-
-                        <div class="media-container">
-                            <img src="../images/showrunner-app.jpg" alt="Showrunner Interface" style="width: 100%; border-radius: 10px;">
-                        </div>
-
-                        <ul>
-                            <li>Helps users keep up with episodes</li>
-                            <li>Track favorite TV shows and progress</li>
-                            <li>Built during ACC Software Developer Bootcamp</li>
-                            <li>Demonstrates full-stack development skills</li>
-                        </ul>
-
-                        <div class="flex-container mt-2">
-                            <a href="#" class="btn">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume Section -->
-        <section id="resume" class="container">
-            <div class="card fade-in-up">
-                <h2>Resume</h2>
-
-                <!-- Summary -->
-                <div class="card">
-                    <h3>Summary</h3>
-                    <p>Software developer and tester with experience in Swift, JavaScript, Python, and frameworks like React, Express.js, and SwiftUI. Strong in debugging, CI, and cross-platform development.</p>
-                </div>
-
-                <!-- Module 6: Tables - Work Experience -->
-                <div class="card" id="experience-table">
-                    <h3>Work Experience</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Company</th>
-                                <th>Duration</th>
-                                <th>Type</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Independent Software Developer</td>
-                                <td>Self-Employed</td>
-                                <td>Dec 2019 – Present</td>
-                                <td>Full-time</td>
-                            </tr>
-                            <tr>
-                                <td>Fulfillment Associate</td>
-                                <td>Amazon</td>
-                                <td>Jan 2022 – Present</td>
-                                <td>Part-time</td>
-                            </tr>
-                            <tr>
-                                <td>Team Member</td>
-                                <td>Whataburger</td>
-                                <td>May 2015 – Dec 2018</td>
-                                <td>Part-time</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Module 6: Tables - Education -->
-                <div class="card" id="education-table">
-                    <h3>Education</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Institution</th>
-                                <th>Degree/Program</th>
-                                <th>Duration</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Austin Community College</td>
-                                <td>Associate's degree, General Studies</td>
-                                <td>Aug 2018 – Dec 2023</td>
-                                <td>Completed</td>
-                            </tr>
-                            <tr>
-                                <td>ACC Software Developer Bootcamp</td>
-                                <td>Full-Stack Development</td>
-                                <td>Completed March 2023</td>
-                                <td>Certificate</td>
-                            </tr>
-                            <tr>
-                                <td>University of Texas at Dallas</td>
-                                <td>Computer Science</td>
-                                <td>2020–2021</td>
-                                <td>Partial</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Module 3: Skills Grid -->
-                <div class="card">
-                    <h3>Skills</h3>
-                    <div class="skills-grid" id="skills-grid">
-                        <div class="card">
-                            <h4>Programming Languages</h4>
-                            <ul>
-                                <li>Swift</li>
-                                <li>JavaScript</li>
-                                <li>Python</li>
-                            </ul>
-                        </div>
-                        <div class="card">
-                            <h4>Frameworks & Libraries</h4>
-                            <ul>
-                                <li>SwiftUI</li>
-                                <li>React</li>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                            </ul>
-                        </div>
-                        <div class="card">
-                            <h4>Tools & Technologies</h4>
-                            <ul>
-                                <li>Docker</li>
-                                <li>GitHub</li>
-                                <li>Bootstrap</li>
-                                <li>Continuous Integration</li>
-                            </ul>
-                        </div>
-                        <div class="card">
-                            <h4>Specializations</h4>
-                            <ul>
-                                <li>Debugging</li>
-                                <li>Cross-platform Development</li>
-                                <li>API Development</li>
-                                <li>Mobile Applications</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Module 8: Multimedia Section -->
-        <section id="multimedia" class="container">
-            <div class="card fade-in-up">
-                <h2>Multimedia Showcase</h2>
-
-                <!-- Module 8: Video Portfolio -->
-                <div class="card" id="portfolio-video">
-                    <h3>Portfolio Demo Video</h3>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Portfolio Demo" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <!-- Module 8: Audio Content -->
-                <div class="card" id="podcast-audio">
-                    <h3>Podcast Appearances</h3>
-                    <audio controls style="width: 100%;">
-                        <source src="../audio/podcast-appearance.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <p>Discussion about iOS development and the future of SwiftUI</p>
-                </div>
-
-                <!-- Module 8: Image Gallery -->
-                <div class="card" id="project-gallery">
-                    <h3>Project Screenshots</h3>
-                    <div class="gallery">
-                        <img src="../images/soft-player-screenshot.jpg" alt="Soft Player Interface">
-                        <img src="../images/spotifyapi-docs.jpg" alt="SpotifyAPI Documentation">
-                        <img src="../images/barcode-drop-mobile.jpg" alt="Barcode Drop Mobile">
-                        <img src="../images/showrunner-dashboard.jpg" alt="Showrunner Dashboard">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Module 7: Web Forms - Contact Section -->
-        <section id="contact" class="container">
-            <div class="card fade-in-up">
-                <h2>Get In Touch</h2>
-
-                <div class="flex-container">
-                    <!-- Contact Form -->
-                    <div class="flex-item">
-                        <div class="form-container" id="contact-form">
-                            <h3>Send Me a Message</h3>
-                            <form id="contact-form-element">
-                                <div class="form-group">
-                                    <label for="name">Name *</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" name="phone">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="project-type">Project Type</label>
-                                    <select id="project-type" name="project-type">
-                                        <option value="">Select a project type</option>
-                                        <option value="ios-app">iOS App Development</option>
-                                        <option value="web-app">Web Application</option>
-                                        <option value="api">API Development</option>
-                                        <option value="consultation">Consultation</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="budget">Budget Range</label>
-                                    <input type="range" id="budget" name="budget" min="1000" max="50000" value="10000">
-                                    <span id="budget-display">$10,000</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="timeline">Preferred Start Date</label>
-                                    <input type="date" id="timeline" name="timeline">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-                                </div>
-
-                                <button type="submit" class="btn">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="flex-item">
-                        <div class="card">
-                            <h3>Contact Information</h3>
-                            <p><strong>Email:</strong> peter@example.com</p>
-                            <p><strong>Location:</strong> Austin, Texas</p>
-                            <p><strong>GitHub:</strong> <a href="https://github.com/Peter-Schorn">@Peter-Schorn</a></p>
-
-                            <h4>Social Media</h4>
-                            <div class="flex-container">
-                                <a href="#" class="btn btn-secondary">LinkedIn</a>
-                                <a href="#" class="btn btn-secondary">Twitter</a>
-                                <a href="#" class="btn btn-secondary">GitHub</a>
-                            </div>
+                            <a href="projects.html" class="btn">View My
+                                Projects</a>
+                            <a href="contact.html" class="btn btn-secondary">Get
+                                In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -447,7 +68,8 @@
                     <p>&copy; 2025 Peter Schorn. All rights reserved.</p>
                 </div>
                 <div class="flex-item text-center">
-                    <a href="links-reference.html" class="btn btn-secondary">View Module References</a>
+                    <a href="links-reference.html"
+                        class="btn btn-secondary">View Links Reference</a>
                 </div>
                 <div class="flex-item text-right">
                     <a href="#home" class="btn btn-secondary">Back to Top</a>
@@ -461,7 +83,7 @@
         "use strict";
 
         // Module 9: DOM Manipulation and Event Handling
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
 
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -476,37 +98,6 @@
                     }
                 });
             });
-
-            // Budget range slider display update
-            const budgetSlider = document.getElementById('budget');
-            const budgetDisplay = document.getElementById('budget-display');
-
-            if (budgetSlider && budgetDisplay) {
-                budgetSlider.addEventListener('input', function() {
-                    budgetDisplay.textContent = `$${parseInt(this.value).toLocaleString()}`;
-                });
-            }
-
-            // Form validation and submission
-            const contactForm = document.getElementById('contact-form-element');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    // Simple form validation
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
-
-                    if (name && email && message) {
-                        alert('Thank you for your message! I\'ll get back to you soon.');
-                        this.reset();
-                        budgetDisplay.textContent = '$10,000';
-                    } else {
-                        alert('Please fill in all required fields.');
-                    }
-                });
-            }
 
             // Fade-in animation on scroll
             const observerOptions = {
@@ -527,89 +118,8 @@
                 observer.observe(card);
             });
 
-            // Dynamic content loading for GitHub API integration
-            loadGitHubStats();
+            console.log('Portfolio home page loaded successfully!');
         });
-
-        // Module 9: API Integration
-        async function loadGitHubStats() {
-            try {
-                const response = await fetch('https://api.github.com/users/Peter-Schorn');
-                const data = await response.json();
-
-                // Update GitHub stats if elements exist
-                const statsElement = document.getElementById('github-stats');
-                if (statsElement) {
-                    statsElement.innerHTML = `
-                        <p>Public Repositories: ${data.public_repos}</p>
-                        <p>Followers: ${data.followers}</p>
-                        <p>Following: ${data.following}</p>
-                    `;
-                }
-            } catch (error) {
-                console.log('GitHub API integration demo (actual API not called in demo)');
-            }
-        }
-
-        // Module 9: Interactive image gallery
-        document.querySelectorAll('.gallery img').forEach(img => {
-            img.addEventListener('click', function() {
-                // Simple modal implementation
-                const modal = document.createElement('div');
-                modal.style.cssText = `
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0,0,0,0.8);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 1000;
-                    cursor: pointer;
-                `;
-
-                const modalImg = document.createElement('img');
-                modalImg.src = this.src;
-                modalImg.style.cssText = `
-                    max-width: 90%;
-                    max-height: 90%;
-                    border-radius: 10px;
-                `;
-
-                modal.appendChild(modalImg);
-                document.body.appendChild(modal);
-
-                modal.addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-            });
-        });
-
-        // Module 9: Dynamic navigation highlighting
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        console.log('Portfolio website loaded successfully!');
-        console.log('All 9 course modules have been integrated into this portfolio.');
     </script>
 </body>
 </html>

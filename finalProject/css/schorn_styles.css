@@ -68,6 +68,34 @@ p {
 }
 
 /* ========================================
+   LIST STYLES
+   ======================================== */
+
+ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Ensure bullet points stay inside cards */
+.card ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    text-indent: -1rem;
+    padding-left: 1rem;
+}
+
+/* ========================================
    LAYOUT COMPONENTS
    ======================================== */
 
@@ -132,6 +160,84 @@ nav a.active {
 nav a.active {
     background: linear-gradient(45deg, #3498db, #2980b9);
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), url('../images/Code Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3498db;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.stat-label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
 }
 
 /* ========================================
@@ -362,6 +468,29 @@ video, iframe {
         column-count: 1;
     }
 
+    /* Hero Section Mobile Styles */
+    .hero-section {
+        min-height: 60vh;
+        background-attachment: scroll;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
     .grid-container {
         grid-template-columns: 1fr;
     }
@@ -384,6 +513,35 @@ video, iframe {
     .card {
         padding: 1rem;
         margin: 1rem 0;
+    }
+
+    /* Hero Section Mobile Styles */
+    .hero-section {
+        min-height: 50vh;
+        padding: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 0.8rem;
+        min-width: 120px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
     }
 
     .btn {
@@ -583,4 +741,124 @@ video, iframe {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   LAYOUT TABLE STYLES
+   ======================================== */
+
+.layout-table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: collapse;
+}
+
+.layout-header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.layout-left {
+    background-color: #e8f4f8;
+    width: 25%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.layout-center {
+    background-color: #f8f8f8;
+    width: 50%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.layout-right {
+    background-color: #f0f8e8;
+    width: 25%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.layout-footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================================
+   PROFILE IMAGE STYLES
+   ======================================== */
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ========================================
+   DEFAULT PAGE STYLES
+   ======================================== */
+
+.default-page-body {
+    margin-top: 3em;
+    margin-left: 3em;
+}
+
+/* ========================================
+   RESPONSIVE TABLE STYLES
+   ======================================== */
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+}
+
+.table-responsive table {
+    min-width: 100%;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    .table-responsive {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .table-responsive table {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   SIMPLE LAYOUT DISPLAY STYLES
+   ======================================== */
+
+.layout-display {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 4px solid #3498db;
+}
+
+.layout-display pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre;
 }

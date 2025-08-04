@@ -5,264 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Layout Structure - Peter Schorn</title>
     <link rel="stylesheet" href="../css/schorn_styles.css">
-    <style>
-        /* Layout visualization styles */
-        .layout-section {
-            border: 3px solid #3498db;
-            margin: 1rem 0;
-            padding: 1rem;
-            background: rgba(52, 152, 219, 0.1);
-            border-radius: 10px;
-        }
-
-        .layout-section h3 {
-            color: #2980b9;
-            font-weight: bold;
-            text-align: center;
-            margin: 0;
-        }
-
-        .layout-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .layout-flex {
-            display: flex;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .layout-item {
-            border: 2px dashed #95a5a6;
-            padding: 1rem;
-            background: rgba(149, 165, 166, 0.1);
-            text-align: center;
-            border-radius: 5px;
-            flex: 1;
-        }
-
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .two-columns {
-            grid-column: span 2;
-        }
-    </style>
 </head>
 <body>
+    <!-- Module 1: HTML5 Semantic Elements -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="schorn_mylayout.html" class="btn">Layout</a></li>
+                <li><a href="schorn_myframework.html">Framework</a></li>
+                <li><a href="links-reference.html">Links Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
         <h1>Portfolio Website Layout Structure</h1>
-        <p class="text-center">This page shows the layout structure and element distribution for the portfolio website.</p>
+        <p class="text-center">This page shows the basic layout structure for the portfolio website.</p>
 
-        <!-- Header Section -->
-        <div class="layout-section">
-            <h3>HEADER - Navigation & Branding</h3>
-            <div class="layout-flex">
-                <div class="layout-item">Logo/Brand</div>
-                <div class="layout-item">Navigation Menu</div>
-                <div class="layout-item">Contact Button</div>
-            </div>
+        <!-- Simple Layout Structure Display -->
+        <div class="layout-display">
+            <h2>Basic Page Layout:</h2>
+            <pre>
+====================================================
+|                    HEADER                        |
+|  Home | Projects | Resume | Contact | Layout     |
+====================================================
+|                                                  |
+|                 MAIN CONTENT                     |
+|                                                  |
+|  - Hero Section (Home page)                     |
+|  - Project Showcase (Projects page)             |
+|  - Resume & Experience (Resume page)            |
+|  - Contact Form (Contact page)                  |
+|  - Layout Structure (This page)                 |
+|  - Framework Demo (Framework page)              |
+|                                                  |
+====================================================
+|                    FOOTER                        |
+|           Navigation & Back to Top               |
+====================================================
+            </pre>
         </div>
-
-        <!-- Hero Section -->
-        <div class="layout-section">
-            <h3>HERO SECTION - Introduction</h3>
-            <div class="layout-flex">
-                <div class="layout-item">Profile Image</div>
-                <div class="layout-item">
-                    <strong>Welcome Text</strong><br>
-                    Name & Title<br>
-                    Brief Description<br>
-                    Call-to-Action Button
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section -->
-        <div class="layout-section">
-            <h3>ABOUT SECTION - Personal Information</h3>
-            <div class="layout-grid">
-                <div class="layout-item full-width">Section Title</div>
-                <div class="layout-item two-columns">
-                    <strong>About Me Text</strong><br>
-                    Biography<br>
-                    Professional Summary<br>
-                    Column Layout (Module 6)
-                </div>
-                <div class="layout-item">
-                    <strong>Quick Facts</strong><br>
-                    Table (Module 6)<br>
-                    Personal Details
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="layout-section">
-            <h3>SKILLS SECTION - Technical Abilities</h3>
-            <div class="layout-grid">
-                <div class="layout-item full-width">Section Title</div>
-                <div class="layout-item">
-                    <strong>Frontend</strong><br>
-                    HTML5 (Module 1)<br>
-                    CSS3 (Module 2)<br>
-                    JavaScript (Module 9)
-                </div>
-                <div class="layout-item">
-                    <strong>Design</strong><br>
-                    Responsive Design<br>
-                    Mobile Web (Module 5)<br>
-                    Graphic Design (Module 4)
-                </div>
-                <div class="layout-item">
-                    <strong>Tools</strong><br>
-                    Development Tools<br>
-                    Version Control<br>
-                    Testing
-                </div>
-            </div>
-        </div>
-
-        <!-- Projects Section -->
-        <div class="layout-section">
-            <h3>PROJECTS SECTION - Portfolio Showcase</h3>
-            <div class="layout-grid">
-                <div class="layout-item full-width">Section Title</div>
-                <div class="layout-item">
-                    <strong>Project 1</strong><br>
-                    Project Image<br>
-                    Description<br>
-                    Technologies Used<br>
-                    Links
-                </div>
-                <div class="layout-item">
-                    <strong>Project 2</strong><br>
-                    Project Image<br>
-                    Description<br>
-                    Technologies Used<br>
-                    Links
-                </div>
-                <div class="layout-item">
-                    <strong>Project 3</strong><br>
-                    Project Image<br>
-                    Description<br>
-                    Technologies Used<br>
-                    Links
-                </div>
-            </div>
-        </div>
-
-        <!-- Experience Section -->
-        <div class="layout-section">
-            <h3>EXPERIENCE SECTION - Professional Background</h3>
-            <div class="layout-grid">
-                <div class="layout-item full-width">Section Title</div>
-                <div class="layout-item full-width">
-                    <strong>Timeline Layout</strong><br>
-                    Education History<br>
-                    Work Experience<br>
-                    Achievements
-                </div>
-            </div>
-        </div>
-
-        <!-- Multimedia Section -->
-        <div class="layout-section">
-            <h3>MULTIMEDIA SECTION - Media Content</h3>
-            <div class="layout-grid">
-                <div class="layout-item full-width">Section Title</div>
-                <div class="layout-item">
-                    <strong>Video Content</strong><br>
-                    Embedded Video (Module 8)<br>
-                    Demo Recordings<br>
-                    Presentations
-                </div>
-                <div class="layout-item">
-                    <strong>Image Gallery</strong><br>
-                    Project Screenshots<br>
-                    Design Work<br>
-                    Interactive Gallery
-                </div>
-                <div class="layout-item">
-                    <strong>Audio/Other</strong><br>
-                    Podcast Appearances<br>
-                    Audio Demos<br>
-                    Interactive Elements
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="layout-section">
-            <h3>CONTACT SECTION - Get In Touch</h3>
-            <div class="layout-flex">
-                <div class="layout-item">
-                    <strong>Contact Form</strong><br>
-                    Web Form (Module 7)<br>
-                    Name, Email, Message<br>
-                    Validation & Submission
-                </div>
-                <div class="layout-item">
-                    <strong>Contact Information</strong><br>
-                    Email Address<br>
-                    Social Media Links<br>
-                    Location
-                </div>
-            </div>
-        </div>
-
-        <!-- Links Reference Section -->
-        <div class="layout-section">
-            <h3>LINKS REFERENCE SECTION - Module Examples</h3>
-            <div class="layout-grid">
-                <div class="layout-item full-width">Section Title</div>
-                <div class="layout-item">
-                    <strong>Modules 1-3</strong><br>
-                    HTML5 Examples<br>
-                    CSS Examples<br>
-                    Layout Examples
-                </div>
-                <div class="layout-item">
-                    <strong>Modules 4-6</strong><br>
-                    Design Examples<br>
-                    Mobile Examples<br>
-                    Table/Column Examples
-                </div>
-                <div class="layout-item">
-                    <strong>Modules 7-9</strong><br>
-                    Form Examples<br>
-                    Multimedia Examples<br>
-                    JavaScript Examples
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Section -->
-        <div class="layout-section">
-            <h3>FOOTER - Site Information</h3>
-            <div class="layout-flex">
-                <div class="layout-item">Copyright Information</div>
-                <div class="layout-item">Social Media Links</div>
-                <div class="layout-item">Quick Navigation</div>
-            </div>
-        </div>
-
-        <!-- Layout Notes -->
-        <div class="card mt-2">
-            <h3>Layout Design Notes:</h3>
-            <ul>
-                <li><strong>Grid System:</strong> Uses CSS Grid for complex layouts and Flexbox for simpler alignments</li>
-                <li><strong>Responsive Design:</strong> Mobile-first approach with breakpoints at 768px and 480px</li>
-                <li><strong>Module Integration:</strong> Each section incorporates specific module requirements</li>
-                <li><strong>Accessibility:</strong> Semantic HTML structure with proper heading hierarchy</li>
-                <li><strong>Visual Hierarchy:</strong> Clear section divisions with consistent spacing and typography</li>
-                <li><strong>Interactive Elements:</strong> Hover effects, transitions, and JavaScript functionality</li>
-            </ul>
-        </div>
+        </ul>
     </div>
 </body>
 </html>
